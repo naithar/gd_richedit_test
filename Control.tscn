@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.407
+margin_left = 20.0
+margin_top = 100.0
+margin_right = 20.0
+margin_bottom = -100.0
+custom_fonts/mono_font = ExtResource( 1 )
+custom_fonts/bold_italics_font = ExtResource( 1 )
+custom_fonts/italics_font = ExtResource( 1 )
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][url=mailto:myemail@gmail.com]Contact Us[/url][/center]
+
+[center][url=https://myurl.com]go to[/url][/center]"
+text = "Contact Us
+
+go to"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="meta_clicked" from="RichTextLabel" to="RichTextLabel" method="_on_RichTextLabel_meta_clicked"]
